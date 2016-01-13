@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{393D82A7-98D4-463B-938C-3B8EEB785EAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <DefaultClrNameSpace>Intro</DefaultClrNameSpace>
+    <RootNamespace>AbideByTheRules</RootNamespace>
+    <AssemblyName>AbideByTheRules</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationIcon>1331500626_bicycle.ico</ApplicationIcon>
+    <Utf8Output>true</Utf8Output>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Controls" />
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.4.4\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BicycleLevels.xaml.cs">
+      <DependentUpon>BicycleLevels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditMap.xaml.cs">
+      <DependentUpon>EditMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Intro_ABTR.xaml.cs">
+      <DependentUpon>Intro_ABTR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkipIntro.xaml.cs">
+      <DependentUpon>SkipIntro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentTeacher.xaml.cs">
+      <DependentUpon>StudentTeacher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.cs" />
+    <Compile Include="TypeOfUser.cs" />
+    <Compile Include="Work.xaml.cs">
+      <DependentUpon>Work.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BicycleLevels.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EditMap.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Intro_ABTR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SkipIntro.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StudentTeacher.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Work.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+    <None Include="Application.ico">
+      <Visible>false</Visible>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Cars\car.png" />
+    <Resource Include="Cars\car_mazda2.png" />
+    <Resource Include="Cars\car_mazda2_second.png" />
+    <Resource Include="Cars\car_mustang_second.png" />
+    <Resource Include="Cars\car_opel.png" />
+    <Resource Include="Cars\car_opel_second.png" />
+    <Resource Include="Child\child_arm.png" />
+    <Resource Include="Child\child_body.png" />
+    <Resource Include="Child\child_left_leg.png" />
+    <Resource Include="Child\child_right_leg.png" />
+    <Resource Include="Maps\introMap.png" />
+    <Resource Include="Maps\introMapblueprint.png" />
+    <Resource Include="Maps\Menu.png" />
+    <Resource Include="OtherThings\bicycle.png" />
+    <Resource Include="Windows\windowShine.png" />
+    <Resource Include="Windows\windowShine10.png" />
+    <Resource Include="Windows\windowShine2.png" />
+    <Resource Include="Windows\windowShine3.png" />
+    <Resource Include="Windows\windowShine4.png" />
+    <Resource Include="Windows\windowShine5.png" />
+    <Resource Include="Windows\windowShine6.png" />
+    <Resource Include="Windows\windowShine7.png" />
+    <Resource Include="Windows\windowShine8.png" />
+    <Resource Include="Windows\windowShine9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="OtherThings\onlyHuman.png" />
+    <Resource Include="Maps\mapGrade1-First.png" />
+    <Resource Include="Maps\firstMapEdit.png" />
+    <Resource Include="1331500626_bicycle.ico" />
+    <Content Include="Audio\Accident.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audio\SP0000.WAV">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Maps\map_intro.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath32)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Expression\Blend\.NETFramework\v4.0\Microsoft.Expression.Blend.WPF.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
